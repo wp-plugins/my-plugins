@@ -127,10 +127,10 @@ function matej_plugins ($content) {
 			if (!strstr($content, $tag))
 				return $content;
          $plugins = get_plugins ();				
-//			if (!is_single()){
-//				echo "Ker je seznam pluginov kar precej dolg (".sizeof($plugins)." jih je), <a href=\"".$post->guid."\">klikni tu</a>, če te zanima...";
-//				return;
-//			}
+			if (!is_single()){
+				echo "Ker je seznam pluginov kar precej dolg (".sizeof($plugins)." jih je), <a href=\"".$post->guid."\">klikni tu</a>, če te zanima...";
+				return;
+			}
 			if (!$plugin_css_displayed)			
 				matej_plugins_head();	
 			if (empty($plugins)) {
